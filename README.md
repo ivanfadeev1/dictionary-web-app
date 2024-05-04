@@ -33,7 +33,7 @@
 
 ### Ссылки
 
-[Live Site URL](ivanfadeev1.github.io/dictionary-web-app/)
+[Live Site URL](https://ivanfadeev1.github.io/dictionary-web-app/?word=keyboard)
 
 ## Процесс
 
