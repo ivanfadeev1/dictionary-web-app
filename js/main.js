@@ -94,9 +94,7 @@ function addMeaningItem(parentElement, meaningData) {
     ".result__part-of-speech-title",
   );
   const definitionList = meaningItem.querySelector(".result__definition-list");
-  const synonymSubtitle = meaningItem.querySelector(
-    ".result__synonym-subtitle",
-  );
+  const synonymWrapper = meaningItem.querySelector(".result__synonym-wrapper");
   const synonymList = meaningItem.querySelector(".result__synonym-list");
 
   partOfSpeechTitle.textContent = meaningData.partOfSpeech;
@@ -110,8 +108,7 @@ function addMeaningItem(parentElement, meaningData) {
   }
 
   if (!meaningData.synonyms.length) {
-    synonymSubtitle.remove();
-    synonymList.remove();
+    synonymWrapper.remove();
   } else {
     meaningData.synonyms.forEach((synonymData) =>
       addSynonymItem(synonymList, synonymData),

@@ -515,11 +515,17 @@
     margin-top: 13px;
   }
 
+  // .result__synonym-wrapper
+  &__synonym-wrapper {
+    display: flex;
+    margin-top: 60px;
+  }
+
   // .result__synonym-subtitle
   &__synonym-subtitle {
     display: inline-block;
-    margin-top: 64px;
-    margin-right: 18px;
+    margin-top: 4px;
+    margin-right: 22px;
     padding-bottom: 0;
   }
 
@@ -528,6 +534,7 @@
     @include set-font(700, 20, 24);
 
     display: inline-block;
+    margin-top: 4px;
     text-decoration: none;
     transition: 0.2s;
 
@@ -581,9 +588,9 @@
   @media (max-width: 814px) {
     padding-top: 48px;
 
-    // .result__synonym-subtitle
-    &__synonym-subtitle {
-      margin-top: 40px;
+    // .result__synonym-wrapper
+    &__synonym-wrapper {
+      margin-top: 36px;
     }
   }
 
@@ -653,10 +660,14 @@
       font-size: 15px;
     }
 
+    // .result__synonym-wrapper
+    &__synonym-wrapper {
+      margin-top: 20px;
+    }
+
     // .result__synonym-subtitle
     &__synonym-subtitle {
-      margin-top: 24px;
-      margin-right: 20px;
+      margin-right: 24px;
       padding-bottom: 0;
     }
 

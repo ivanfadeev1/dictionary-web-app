@@ -508,10 +508,14 @@ body {
 .result__definition-example {
   margin-top: 13px;
 }
+.result__synonym-wrapper {
+  display: flex;
+  margin-top: 60px;
+}
 .result__synonym-subtitle {
   display: inline-block;
-  margin-top: 64px;
-  margin-right: 18px;
+  margin-top: 4px;
+  margin-right: 22px;
   padding-bottom: 0;
 }
 .result__synonym-item {
@@ -519,6 +523,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   display: inline-block;
+  margin-top: 4px;
   text-decoration: none;
   transition: 0.2s;
 }
@@ -560,8 +565,8 @@ body {
   .result {
     padding-top: 48px;
   }
-  .result__synonym-subtitle {
-    margin-top: 40px;
+  .result__synonym-wrapper {
+    margin-top: 36px;
   }
 }
 @media (max-width: 640px) {
@@ -615,9 +620,11 @@ body {
   .result__definition-item {
     font-size: 15px;
   }
+  .result__synonym-wrapper {
+    margin-top: 20px;
+  }
   .result__synonym-subtitle {
-    margin-top: 24px;
-    margin-right: 20px;
+    margin-right: 24px;
     padding-bottom: 0;
   }
   .result__synonym-item {
