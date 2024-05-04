@@ -206,6 +206,7 @@ function loadEmptyResult(event) {
     currentURL.searchParams.delete("word");
     window.history.pushState({ word: "" }, "", currentURL);
   }
+  document.title = "Dictionary";
   searchInput.parentNode.classList.remove("search--invalid");
   animateSearchBar();
 }
