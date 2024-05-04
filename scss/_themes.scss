@@ -1,0 +1,248 @@
+@import "variables";
+
+/* Light theme */
+
+// General
+body {
+  color: $color-gray-5;
+  background-color: $color-white;
+}
+
+// Header
+.header {
+  // .header__font-list
+  &__font-list {
+    background-color: $color-white;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  // .header__theme-toggle
+  &__theme-toggle {
+    &::before {
+      background-color: $color-gray-2;
+    }
+  }
+
+  @media (min-width: 815px) {
+    // .header__font-option-label
+    &__font-option-label {
+      &:hover,
+      .header__font-option-input:focus + & {
+        color: $color-purple;
+      }
+    }
+  }
+}
+
+// Toggle
+.toggle {
+  // .toggle__slider
+  &__slider {
+    background-color: $color-gray-3;
+
+    &::before {
+      background-color: $color-white;
+    }
+  }
+
+  // .toggle__moon
+  &__moon {
+    stroke: $color-gray-7;
+  }
+
+  // toggle__input:checked + .toggle__slider
+  &__input:checked + .toggle__slider {
+    background-color: $color-purple;
+  }
+
+  // toggle__input:checked + .toggle__moon
+  &__input:checked ~ .toggle__moon {
+    stroke: $color-purple;
+  }
+}
+
+// Search
+.search {
+  background-color: $color-gray-1;
+  border: 1px solid transparent;
+
+  // .search__input
+  &__input {
+    caret-color: $color-purple;
+
+    &:-webkit-autofill {
+      box-shadow: 0 0 0 1000px $color-gray-1 inset;
+
+      -webkit-text-fill-color: $color-gray-5;
+    }
+  }
+
+  // .search__validation-message
+  &__validation-message {
+    color: $color-red;
+  }
+
+  // .search--active
+  &--active {
+    border-color: $color-purple;
+  }
+
+  // .search--invalid
+  &--invalid {
+    border-color: $color-red;
+
+    .search__validation-message {
+      opacity: 1;
+    }
+  }
+}
+
+// Result
+.result {
+  // .result__phonetic
+  &__phonetic {
+    color: $color-purple;
+  }
+
+  // .result__audio-button
+  &__audio-button {
+    // .result__audio-button-circle
+    &-circle {
+      opacity: 0.25;
+      fill: $color-purple;
+    }
+
+    // .result__audio-button-play
+    &-play {
+      fill: $color-purple;
+      transition: 0.2s;
+    }
+  }
+
+  // .result__title-line
+  &__title-line {
+    background-color: $color-gray-2;
+  }
+
+  // .result__subtitle
+  &__subtitle {
+    color: $color-gray-3;
+  }
+
+  // .result__definition-item
+  &__definition-item {
+    &::before {
+      background-color: $color-purple;
+    }
+  }
+
+  // .result__definition-example
+  &__definition-example {
+    color: $color-gray-3;
+  }
+
+  // .result__synonym-item
+  &__synonym-item {
+    color: $color-purple;
+  }
+
+  // .result__source-wrapper
+  &__source-wrapper {
+    border-top: 1px solid $color-gray-2;
+  }
+
+  // .result__source-subtitle
+  &__source-subtitle {
+    color: $color-gray-3;
+  }
+
+  // .result__source-link
+  &__source-link {
+    color: $color-gray-5;
+  }
+
+  @media (min-width: 815px) {
+    // .result__audio-button
+    &__audio-button:hover {
+      .result__audio-button-circle {
+        opacity: 1;
+        fill: $color-purple;
+      }
+
+      .result__audio-button-play {
+        fill: $color-white;
+      }
+    }
+
+    // .result__source-link
+    &__source-link:hover {
+      color: $color-purple;
+    }
+  }
+}
+
+// Not found
+.not-found {
+  // .not-found__descr
+  &__descr {
+    color: $color-gray-3;
+  }
+}
+
+/* Dark theme */
+
+.dark {
+  // General
+  body {
+    color: $color-white;
+    background-color: $color-black;
+  }
+
+  // Header
+  .header {
+    // .header__font-list
+    &__font-list {
+      background-color: $color-gray-6;
+      box-shadow: 0 5px 30px $color-purple;
+    }
+  }
+
+  // Search
+  .search {
+    background-color: $color-gray-6;
+
+    // .search__input
+    &__input {
+      &:-webkit-autofill {
+        box-shadow: 0 0 0 1000px $color-gray-6 inset;
+
+        -webkit-text-fill-color: $color-white;
+      }
+    }
+  }
+
+  // Result
+  .result {
+    // .result__title-line
+    &__title-line {
+      background-color: $color-gray-4;
+    }
+
+    // .result__source-wrapper
+    &__source-wrapper {
+      border-color: $color-gray-4;
+    }
+
+    // .result__source-link
+    &__source-link {
+      color: $color-white;
+    }
+
+    @media (min-width: 815px) {
+      // .result__source-link
+      &__source-link:hover {
+        color: $color-purple;
+      }
+    }
+  }
+}
