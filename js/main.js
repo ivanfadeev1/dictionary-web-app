@@ -190,6 +190,8 @@ async function handlePopstate(event) {
     left: 0,
     behavior: "instant",
   });
+
+  searchInput.parentNode.classList.remove("search--invalid");
 }
 
 function loadDefaultResult() {
